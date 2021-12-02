@@ -1,0 +1,46 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.magic {
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2rem 5rem 2rem 5rem;
+}
+
+.magic::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100% 0, 100% 0, 100% 100%, 0 100%;
+    background-image:
+            linear-gradient(red, orange, yellow, lightgreen),
+            linear-gradient(green, dodgerblue, mediumpurple, purple);
+    animation: rotate 5s linear infinite;
+}
+
+.magic::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: white;
+    border-radius: 5px;
+}
