@@ -127,8 +127,13 @@ def predict(sentence):
 
 
 def main():
-    sentence = "On January 1, 1978, a Boeing 747-237B, Air India Flight 855, crashed into the Arabian Sea just off the coast of Bombay, India, killing all 190 passengers and 23 crew on board."
-    predict(sentence)
+    while True:
+        sentence = input("\nREADY FOR YOUR TEXT: ")
+        if(sentence.lower() == 'quit'):
+          break
+
+        print("CALLING THE EXTRACTION SYSTEM...\n")
+        predict(sentence)   
 
 
 if __name__ == "__main__":
