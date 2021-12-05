@@ -13,11 +13,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/index-magic.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/index-magic.css">
 
     <!-- Example loader -->
-    <script src="js/example-logic.js"></script>
+    <script src="../static/js/example-logic.js"></script>
 
 </head>
 <body>
@@ -55,13 +55,14 @@
                     <label for="inputTextArea">Insert an input to see how it extracts the information.</label>
                     <textarea class="form-control" id="inputTextArea" rows="3"></textarea>
                 </div>
-                <button class="btn btn-secondary" id="loadExample" type="button" >Load Example</button>
+                <button class="btn btn-secondary" id="loadExample" type="button">Load Example</button>
                 <button class="btn btn-primary" id="IEFromExample" role="button">Extract information &raquo;</button>
             </div>
 
             <div class="col-md">
                 <h3>Response</h3>
-                <p id="responseTextData">.</p>
+                <br>
+                <div id="responseTextData" class="text-justify"></div>
             </div>
         </div>
     </div>
@@ -92,4 +93,5 @@
     <p>&copy; Roger Pedros 2021</p>
 </footer>
 
+</body>
 </html>

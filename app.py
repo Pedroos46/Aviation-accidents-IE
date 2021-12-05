@@ -3,29 +3,32 @@ import threading
 import webbrowser
 import os
 
-
 from flask import Flask, render_template, request
-
+from flask_cors import CORS
 from modelrun import inference, modelInit
 
 PORT = 80
 url = 'localhost'
 
-# command to run: flask run --host=localhost --port=5000
-
-print("\n--> Starting up the server.")
+# command to run: flask run --host=127.0.0.1 --port=5000
 app = Flask(__name__)
-modelData = modelInit()
+cors = CORS(app, resources={r"/foo": {"origins": "*"}})
+app.config['CORS_HEADERS'] = 'Content-Type'
 
+print("--> Starting up the server.")
+
+modelData = modelInit()
 
 if __name__ == '__main__':
     app.run()
-    threading.Timer(1.5, lambda: webbrowser.open_new('www.google.com')).start()
-    os.system("open https://google.com")
+
+if __name__ == 'app':
+    print("--> Server is ready. 🔥")
+    #TODO AUTOMATIC OPEN MAIN PAGE
 
 @app.route('/')
-def hello_world():  # put application's code here
-    return render_template("else.html")
+def start():  # put application's code here
+    return render_template("index.html")
 
 
 # On localhost:5000/run

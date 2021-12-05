@@ -15,16 +15,32 @@ const sentence_list = [sentence1, sentence2, sentence3, sentence4, sentence5, se
 
 
 window.addEventListener('load', function () {
-
     document.getElementById("loadExample").addEventListener("click", loadExample);
     document.getElementById("IEFromExample").addEventListener("click", IEFromExample);
-
 })
 
 function IEFromExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
+    let inputTextAreaValue = document.getElementById('inputTextArea').value;
+    responseTextDataElement.innerText = "";
 
-    //CONECTION TO BERT HERE.
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+    let requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    const URL = "http://127.0.0.1:5000/"+"run?inputstr=" + inputTextAreaValue
+    fetch(URL, requestOptions)
+        .then(response => response.text())
+        .then(result => {
+                console.log("Server response: " + result);
+                responseFormater(responseTextDataElement, result);
+        })
+        .catch(error => console.log('error', error));
 }
 
 function loadExample(){
@@ -33,6 +49,17 @@ function loadExample(){
 
     let num = getRandomInt(10);
     element.value = sentence_list[num];
+}
+
+function responseFormater(tag, result){
+    //tag.innerHTML = result;
+    let parsedResults = JSON.parse(result)
+    parsedResults.map( (x) =>{
+        for([key, val] of Object.entries(x)) {
+            tag.innerHTML +=  '<p class="p-inline '+val+'">'+key+'</p>';
+        }
+    })
+
 }
 
 

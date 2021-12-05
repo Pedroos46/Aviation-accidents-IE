@@ -11,7 +11,7 @@ from nltk import word_tokenize
 app = Flask(__name__, static_url_path='/static')
 
 def load_model(device):
-    path = './model/aviation-accidents.pt'
+    path = '../model/aviation-accidents.pt'
     loaded_model = torch.load(path, map_location=torch.device(device))
     loaded_model.to(device)
 
@@ -26,7 +26,7 @@ def load_tokenizer():
 
 def load_data():
     # Load data
-    f = open('./model/data.json',)
+    f = open('../model/data.json', )
     data = json.load(f)
     data['index2tag'] = {int(k): v for k,v in data['index2tag'].items()}
 

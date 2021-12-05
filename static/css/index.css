@@ -8,3 +8,63 @@ textarea {
 }
 
 
+p-inline{
+    display:inline-block;
+}
+
+I-DateOfAccident, B-DateOfAccident{
+    color: red;
+}
+
+B-TypeOfAccident,I-TypeOfAccident {
+    color: firebrick;
+}
+
+B-Year{
+    color: orange;
+}
+
+B-NumberOfVictims{
+    color: greenyellow;
+}
+
+B-Survivors{
+   color: limegreen;
+}
+
+B-Passenger, I-Passenger{
+    color: blue;
+}
+
+I-TypeOfAircraft, B-TypeOfAircraft{
+    color: cyan;
+}
+
+B-Tripulation {
+    color: cornflowerblue;
+}
+
+I-Place, B-Place{
+    color: yellow;
+}
+
+I-Cause, B-Cause{
+    color: hotpink;
+}
+
+B-Airline, I-Airline{
+    color: blue;
+}
+B-FlightNumber, I-FlightNumber {
+    color: aquamarine;
+}
+
+I-Origin, I-Destination, B-Origin ,B-Destination{
+    color: mediumpurple;
+}
+
+
+
+
+
+
