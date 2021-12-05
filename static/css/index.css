@@ -8,58 +8,58 @@ textarea {
 }
 
 
-p-inline{
+.container div p {
     display:inline-block;
 }
 
-I-DateOfAccident, B-DateOfAccident{
+.I-DateOfAccident, .B-DateOfAccident{
     color: red;
 }
 
-B-TypeOfAccident,I-TypeOfAccident {
+.B-TypeOfAccident, .I-TypeOfAccident {
     color: firebrick;
 }
 
-B-Year{
+.B-Year{
     color: orange;
 }
 
-B-NumberOfVictims{
+.B-NumberOfVictims{
     color: greenyellow;
 }
 
-B-Survivors{
+.B-Survivors{
    color: limegreen;
 }
 
-B-Passenger, I-Passenger{
+.B-Passenger, .I-Passenger{
     color: blue;
 }
 
-I-TypeOfAircraft, B-TypeOfAircraft{
+.I-TypeOfAircraft, .B-TypeOfAircraft{
     color: cyan;
 }
 
-B-Tripulation {
+.B-Tripulation {
     color: cornflowerblue;
 }
 
-I-Place, B-Place{
+.I-Place, .B-Place{
     color: yellow;
 }
 
-I-Cause, B-Cause{
+.I-Cause, .B-Cause{
     color: hotpink;
 }
 
-B-Airline, I-Airline{
+.B-Airline, .I-Airline{
     color: blue;
 }
-B-FlightNumber, I-FlightNumber {
+.B-FlightNumber, .I-FlightNumber {
     color: aquamarine;
 }
 
-I-Origin, I-Destination, B-Origin ,B-Destination{
+.I-Origin, .I-Destination, .B-Origin, .B-Destination{
     color: mediumpurple;
 }
 

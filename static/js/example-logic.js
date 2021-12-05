@@ -19,10 +19,20 @@ window.addEventListener('load', function () {
     document.getElementById("IEFromExample").addEventListener("click", IEFromExample);
 })
 
+function loadExample(){
+    let element = document.getElementById('inputTextArea');
+    element.value = '';
+
+    let num = getRandomInt(10);
+    element.value = sentence_list[num];
+}
+
 function IEFromExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
+    let responseTextDataElementJ = $('#responseTextData');
     let inputTextAreaValue = document.getElementById('inputTextArea').value;
-    responseTextDataElement.innerText = "";
+
+    responseTextDataElementJ.innerText = "";
 
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -38,17 +48,9 @@ function IEFromExample(){
         .then(response => response.text())
         .then(result => {
                 console.log("Server response: " + result);
-                responseFormater(responseTextDataElement, result);
+                responseFormater(responseTextDataElementJ, result);
         })
         .catch(error => console.log('error', error));
-}
-
-function loadExample(){
-    let element = document.getElementById('inputTextArea');
-    element.value = '';
-
-    let num = getRandomInt(10);
-    element.value = sentence_list[num];
 }
 
 function responseFormater(tag, result){
@@ -56,12 +58,23 @@ function responseFormater(tag, result){
     let parsedResults = JSON.parse(result)
     parsedResults.map( (x) =>{
         for([key, val] of Object.entries(x)) {
-            tag.innerHTML +=  '<p class="p-inline '+val+'">'+key+'</p>';
+            if(val === 'O'){
+                tag.append('<p class='+val+'>'+key+'</p>');
+            }
+            else{
+                tag.append('<p data-toggle="tooltip" ' +
+                    'data-placement="top" ' +
+                    'title="'+val+'" ' +
+                    'class='+val+'>'+key+'</p>');
+
+            }
         }
     })
 
-}
+    //Tooltip loader. (Bootstrap)
+    $('[data-toggle="tooltip"]').tooltip();
 
+}
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
