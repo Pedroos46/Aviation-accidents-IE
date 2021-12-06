@@ -2,9 +2,8 @@ import torch
 from torch import cuda
 import json
 import nltk
-import numpy as np
 
-from transformers import BertTokenizerFast, BertConfig, BertForTokenClassification
+from transformers import BertTokenizerFast
 from nltk import word_tokenize
 
 nltk.download('punkt')
@@ -37,7 +36,7 @@ def load_data():
 
 
 def modelInit():
-    ## CARGAMOS EL MODELO
+    # CARGAMOS EL MODELO
     print("--> Loading the model. Please wait.\n")
 
     device = 'cuda' if cuda.is_available() else 'cpu'
@@ -49,7 +48,7 @@ def modelInit():
 
 
 def inference(modelData, sentence):
-    device, loaded_model, tokenizer, data = modelData;
+    device, loaded_model, tokenizer, data = modelData
 
     inputs = tokenizer(word_tokenize(sentence),
                        is_split_into_words=True,

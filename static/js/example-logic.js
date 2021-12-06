@@ -20,6 +20,9 @@ window.addEventListener('load', function () {
 })
 
 function loadExample(){
+    let responseTextDataElement = document.getElementById('responseTextData');
+    responseTextDataElement.innerText = "";
+
     let element = document.getElementById('inputTextArea');
     element.value = '';
 
@@ -30,9 +33,10 @@ function loadExample(){
 function IEFromExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
     let responseTextDataElementJ = $('#responseTextData');
+
     let inputTextAreaValue = document.getElementById('inputTextArea').value;
 
-    responseTextDataElementJ.innerText = "";
+    responseTextDataElement.innerText = "";
 
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
@@ -54,10 +58,15 @@ function IEFromExample(){
 }
 
 function responseFormater(tag, result){
-    //tag.innerHTML = result;
+    let charactersWithNoFrontSpace = new Set([',',  '.', ';', '/', '?', '!'])
+
     let parsedResults = JSON.parse(result)
     parsedResults.map( (x) =>{
         for([key, val] of Object.entries(x)) {
+            if (!charactersWithNoFrontSpace.has(key)) {
+                key = '&nbsp'+key;
+            }
+
             if(val === 'O'){
                 tag.append('<p class='+val+'>'+key+'</p>');
             }
@@ -66,7 +75,6 @@ function responseFormater(tag, result){
                     'data-placement="top" ' +
                     'title="'+val+'" ' +
                     'class='+val+'>'+key+'</p>');
-
             }
         }
     })

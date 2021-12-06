@@ -4,24 +4,24 @@
 }
 
 textarea {
-    min-height: 170px;
+    min-height: 150px;
+    max-height: 170px;
 }
-
 
 .container div p {
     display:inline-block;
 }
 
+
 .I-DateOfAccident, .B-DateOfAccident{
     color: red;
+}
+.B-Year{
+    color: firebrick;
 }
 
 .B-TypeOfAccident, .I-TypeOfAccident {
     color: firebrick;
-}
-
-.B-Year{
-    color: orange;
 }
 
 .B-NumberOfVictims{
@@ -45,7 +45,7 @@ textarea {
 }
 
 .I-Place, .B-Place{
-    color: yellow;
+    color: darkgoldenrod;
 }
 
 .I-Cause, .B-Cause{
