@@ -81,7 +81,42 @@ def inference(modelData, sentence):
             continue
 
     output = []
+    tag_temp = ''
+    accumulate_word = ''
+    bio = False
     for word, tag in zip(word_tokenize(sentence), prediction):
-        output.append({word: tag})
+        # Caso Outside
+        if tag[0] == 'O' and bio:
+            output.append({accumulate_word: tag_temp})
+            tag_temp = ''
+            accumulate_word = ''
+            bio = False
+
+        # Caso de dos tag currente != tag anterior.
+        elif tag[2:] != tag_temp and bio:
+            output.append({accumulate_word: tag_temp})
+            # Caso de tag currente es tipo Beganning.
+            if tag[0] == 'B':
+                tag_temp = tag[2:]
+                accumulate_word = word
+                bio = True
+            else:
+                bio = False
+
+        # Caso generico de inside
+        elif tag[0] == 'I' and bio:
+            accumulate_word = "{} {}".format(accumulate_word, word)
+    
+        # Caso generico de Beginning
+        elif tag[0] == 'B':
+            # Caso: B detras de otro B
+            if bio:
+                output.append({accumulate_word: tag_temp})
+
+            tag_temp = tag[2:]
+            accumulate_word = word
+            bio = True
+        else:
+            output.append({word: tag[2:]})
 
     return json.dumps(output)
