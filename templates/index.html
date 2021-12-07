@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>AIW 2021: Aviation Accidents Information Extraction</title>
 
-    <!-- Bootstrap 4.3.1 | Jquery: 3.3.1 / 3.6.0 | Popper: 1.14.7 -->
+    <!-- Bootstrap 4.3.1 | Jquery: 3.6.0 | Popper: 1.14.7 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -20,21 +20,30 @@
     <link rel="stylesheet" href="../static/css/index.css">
     <link rel="stylesheet" href="../static/css/index-magic.css">
 
-    <!-- Example manager -->
+    <!-- Javascript -->
     <script src="../static/js/example-logic.js"></script>
 
 </head>
 <body>
-<nav class="navbar navbar-expand-md  navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Aviation Accidents IE</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark"> <!-- fixed-top -->
+    <a class="navbar-brand" href="#">AIW 2021: IE</a>
 
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">???</a>
             </li>
         </ul>
-        <a class="navbar-text" href="#">Go to notebook.</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="navbar-text" title="Download the .ipynb."
+                   href=""
+                   download target="_blank">
+                    <img src="../static/img/icon_file_download.png" width="30" height="30" alt="">
+                </a>
+            </li>
+        </ul>
+
+
     </div>
 </nav>
 
@@ -43,12 +52,29 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>Authors:</p>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a
-                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
-                unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <h1 class="display-4">Information Extraction: Aviation Accidents.</h1>
+            <p class="font-weight-bold">Authors: Roger Pedrós Villorbina. Wenjie Jin. Rodrigo Caero.</p>
+            <p>As part of our Intelligent Applications for the Web subject in UPF we have been learning about
+                information extraction.
+                We have seen different ways of extracting and understanding information, up to advanced solutions based
+                on BERT.
+            </p>
+            <p>As part of this work we've been working on a BERT model which we fine-tune to extract certain
+                information.
+                In our case, we work with an aviation accidents data set from
+                <a href="http://www.taln.upf.edu/pages/concisus/index.html">Concisus</a>
+                corpus a bilingual (English/Spanish) corpus for Information Extraction.
+                So our fine-tuned BERT model should recognise tags like: DateOfAccident, TypeOfAircraft, Place, Victims,
+                etc,
+                as specified in the full report
+            </p>
+
+            <p>Finally for this application, we have built a small web application in order to test it more comfortably
+                to test it.
+                Ideally it should be started together with the Flask server which contains the model.
+            </p>
+
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Report &raquo;</a></p>
         </div>
     </div>
 
@@ -63,7 +89,7 @@
                 </div>
                 <button class="btn btn-secondary" id="loadExample" type="button">Load Example</button>
                 <button class="btn btn-primary" id="IEFromExample" role="button">Extract information &raquo;</button>
-                <p class="text-left">Or pick one example form <a
+                <p class="text-left">Or pick one example from <a
                         href="https://en.wikipedia.org/wiki/List_of_accidents_and_incidents_involving_commercial_aircraft"
                         target="_blank">Wikipedia.</a></p>
             </div>
@@ -83,35 +109,77 @@
 
         <h2>Other examples:</h2><br>
         <div id="otherExamples"></div>
-        <script>
-            fetch('other-examples.html')
-                .then(data => data.text())
-                .then(html => document.getElementById('otherExamples').innerHTML = html)
-                .then(html =>{
-                    $('[data-toggle="tooltip"]').tooltip();
-                })
-        </script>
+
+        <!-- Loaded as javascript to avoid CORS problems -->
+        <script src="../static/js/other-examples.js"></script>
 
 
     </div>
-    <br><br>
 
 </main>
+<br><br>
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-0">
+    <hr>
 
-<footer class="container">
-    <div class="row d-flex align-items-center">
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-            <p>&copy; Roger Pedrós Villorbina 2021</p>
-            <br>
-            <a href="http://127.0.0.1:5000/shutdown">Shutdown server.</a>
-        </div>
+    <div class="container text-center text-md-left">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Credits:</h5>
+                <p>Intelligent Applications for the Web taught by
+                    <a href="https://scholar.google.com/citations?user=WMrCFCIAAAAJ&hl=en">Horacio Saggion</a>
+                    in UPF. Barcelona.
+                </p>
+                <p>
+                    <img src="../static/img/UPFt_rgb.png" width="132.6" height="44.2" alt="">
+                </p>
+            </div>
+            <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-7 text-center text-md-right">
-            <!-- Facebook -->
-            <a class="">UPF LOGO</a>
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-3 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Authors:</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">Roger Pedrós Villorbina</a>
+                    </li>
+                    <li>
+                        <a href="#!">Wenjie Jin</a>
+                    </li>
+                    <li>
+                        <a href="#!">Rodrigo Caero</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+            <hr class="clearfix w-100 d-md-none">
+            <div class="col-md-2 mx-auto">
+                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Acknowledgements:</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#!">References</a>
+                    </li>
+                    <li>
+                        <a href="#!">Tools</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Pedroos46/Aviation-accidents-IE">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="http://127.0.0.1:5000/shutdown">Shutdown server</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+    <!-- Copyright -->
+    <hr>
+    <div class="footer-copyright text-center py-1">© Apache-2.0 License
+
+    </div>
+    <!-- Copyright -->
+
 </footer>
 
 </body>

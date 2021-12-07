@@ -8,60 +8,74 @@ textarea {
     max-height: 170px;
 }
 
+footer{
+    background-color: #e9ecef;
+}
+
+.jumbotron{
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
+
 .container div p {
     display:inline-block;
 }
 
+.navbar-nav > li{
+    margin-left:7px;
+    margin-right:7px;
+}
 
-.DateOfAccident{
+.I-DateOfAccident, .B-DateOfAccident, .DateOfAccident{
     color: red;
 }
-.Year{
+.B-Year, .Year{
     color: firebrick;
 }
 
-.TypeOfAccident {
-    color: firebrick;
+.B-TypeOfAccident, .I-TypeOfAccident, .TypeOfAccident {
+    color: darkorange;
 }
 
-.NumberOfVictims {
+.B-NumberOfVictims, .NumberOfVictims {
     color: greenyellow;
 }
 
-.Survivors {
-   color: limegreen;
+.B-Survivors,.Survivors {
+    color: limegreen;
 }
 
-.Passenger {
+.B-Passenger, .I-Passenger, .Passenger {
     color: blue;
 }
 
-.TypeOfAircraft{
+.I-TypeOfAircraft, .B-TypeOfAircraft, .TypeOfAircraft {
     color: cyan;
 }
 
-.Tripulation {
+.B-Tripulation, .Tripulation {
     color: cornflowerblue;
 }
 
-.Place{
+.I-Place, .B-Place, .Place {
     color: darkgoldenrod;
 }
 
-.Cause{
+.I-Cause, .B-Cause, .Cause {
     color: hotpink;
 }
 
-.Airline{
+.B-Airline, .I-Airline, .Airline {
     color: blue;
 }
-.FlightNumber {
+.B-FlightNumber, .I-FlightNumber, .FlightNumber {
     color: aquamarine;
 }
 
-.Origin, .Destination{
+.I-Origin, .I-Destination, .B-Origin, .Origin, .B-Destination, .Destination{
     color: mediumpurple;
 }
+
 
 
 
