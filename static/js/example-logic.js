@@ -19,6 +19,9 @@ window.addEventListener('load', function () {
     document.getElementById("IEFromExample").addEventListener("click", IEFromExample);
 })
 
+let connectionWithServerFailed = false;
+
+
 function loadExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
     responseTextDataElement.innerText = "";
@@ -30,7 +33,7 @@ function loadExample(){
     element.value = sentence_list[num];
 }
 
-function IEFromExample(){
+function IEFromExample(host= "http://127.0.0.1:5000"){
     let responseTextDataElement = document.getElementById('responseTextData');
     let responseTextDataElementJ = $('#responseTextData');
 
@@ -47,14 +50,20 @@ function IEFromExample(){
         redirect: 'follow'
     };
 
-    const URL = "http://127.0.0.1:5000/"+"run?inputstr=" + inputTextAreaValue
+    const URL = host+ "/run?inputstr=" + inputTextAreaValue
     fetch(URL, requestOptions)
         .then(response => response.text())
         .then(result => {
                 console.log("Server response: " + result);
                 responseFormater(responseTextDataElementJ, result);
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            console.log('error', error)
+            //it may fail due to flask configurations, trying with the hostname from DOM
+            if(!connectionWithServerFailed){ IEFromExample(window.location.host)}
+            else{ responseTextDataElement.innerHTML = '<p class="text-danger">Looks like there is a problem with Flask server.</p>'}
+            connectionWithServerFailed = true;
+        });
 }
 
 function responseFormater(tag, result){
@@ -67,7 +76,7 @@ function responseFormater(tag, result){
                 key = '&nbsp'+key;
             }
 
-            if(val === 'O'){
+            if(val === ''){
                 tag.append('<p class='+val+'>'+key+'</p>');
             }
             else{

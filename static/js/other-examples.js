@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+document.write(`
 
 <div class="no-inline">
     <div class="row">
@@ -284,3 +283,7 @@
     </div>
 
 </div>
+
+`);
+
+$('[data-toggle="tooltip"]').tooltip();

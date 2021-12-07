@@ -117,6 +117,6 @@ def inference(modelData, sentence):
             accumulate_word = word
             bio = True
         else:
-            output.append({word: tag[2:]})
+            output.append({word: ""})
 
     return json.dumps(output)

@@ -12,7 +12,6 @@ url = 'localhost'
 
 # command to run: flask run --host=127.0.0.1 --port=5000
 app = Flask(__name__, static_folder='static', template_folder='templates')
-app.config['TESTING'] = True
 
 cors = CORS(app, resources={r"/foo": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -29,11 +28,10 @@ if __name__ == 'app':
 
 
 @app.route('/')
-def start():  # put application's code here
+def start():
     return render_template("index.html")
 
 
-# On localhost:5000/run
 @app.route('/run', methods=['GET'])
 def run():
     if request.args.get('inputstr') is None:
@@ -51,11 +49,8 @@ def run():
                 return "Something went wrong 😔"
 
 
+##########################################################
 # INTERNAL FUNCTIONS OF SERVER:
-@app.route('/other-examples.html')
-def other_examples_template():
-    return render_template("other-examples.html")
-
 
 # Shutdown server without crtl+c
 def shutdown_server():

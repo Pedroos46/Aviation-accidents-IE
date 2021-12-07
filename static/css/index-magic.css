@@ -26,11 +26,11 @@
     height: 200%;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 100% 0, 100% 0, 100% 100%, 0 100%;
+    background-position: 100%;
     background-image:
             linear-gradient(red, orange, yellow, lightgreen),
             linear-gradient(green, dodgerblue, mediumpurple, purple);
-    animation: rotate 5s linear infinite;
+    animation: 5s linear infinite;
 }
 
 .magic::after {
