@@ -1,30 +1,31 @@
 import sys
-import threading
 import webbrowser
-import os
 
 from flask import Flask, render_template, request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from modelrun import inference, modelInit
 
-PORT = 80
-url = 'localhost'
+# Sever config | command to run: flask run --host=127.0.0.1 --port=5000
+host = '127.0.0.1'
+port = 5000
+url = 'http://'+host+':'+str(port)
 
-# command to run: flask run --host=127.0.0.1 --port=5000
+# Flask Settings:
 app = Flask(__name__, static_folder='static', template_folder='templates')
-
+# CORS
 cors = CORS(app, resources={r"/foo": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 print("--> Starting up the server.")
 modelData = modelInit()
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host=host, port=port)
 
 if __name__ == 'app':
     print("--> Server is ready. 🔥")
-    # TODO AUTOMATIC OPEN MAIN PAGE
+    webbrowser.open(url)
 
 
 @app.route('/')
@@ -33,6 +34,7 @@ def start():
 
 
 @app.route('/run', methods=['GET'])
+@cross_origin(origin='127.0.0.1',headers=['Content- Type','Authorization'])
 def run():
     if request.args.get('inputstr') is None:
         return 'Wrong input 🤔🤨'

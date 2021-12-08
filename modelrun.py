@@ -80,13 +80,25 @@ def inference(modelData, sentence):
         else:
             continue
 
+
     output = []
+
+    '''for word, tag in zip(word_tokenize(sentence), prediction):
+        output.append({word: tag})
+
+    return json.dumps(output)'''
+
     tag_temp = ''
     accumulate_word = ''
     bio = False
+    characters = [',',  '.', ';', '/', '?', '!', '-', ':', '_', '—', '–']
+
     for word, tag in zip(word_tokenize(sentence), prediction):
         # Caso Outside
         if tag[0] == 'O' and bio:
+            if word in characters:
+                accumulate_word += word
+
             output.append({accumulate_word: tag_temp})
             tag_temp = ''
             accumulate_word = ''

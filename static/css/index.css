@@ -21,6 +21,10 @@ footer{
     display:inline-block;
 }
 
+.simple-inline > div p {
+    display: inline;
+}
+
 .navbar-nav > li{
     margin-left:7px;
     margin-right:7px;
@@ -32,46 +36,36 @@ footer{
 .B-Year, .Year{
     color: firebrick;
 }
-
 .B-TypeOfAccident, .I-TypeOfAccident, .TypeOfAccident {
     color: darkorange;
 }
-
 .B-NumberOfVictims, .NumberOfVictims {
-    color: greenyellow;
+    color: forestgreen;
 }
-
 .B-Survivors,.Survivors {
     color: limegreen;
 }
-
 .B-Passenger, .I-Passenger, .Passenger {
     color: blue;
 }
-
 .I-TypeOfAircraft, .B-TypeOfAircraft, .TypeOfAircraft {
     color: cyan;
 }
-
 .B-Tripulation, .Tripulation {
     color: cornflowerblue;
 }
-
 .I-Place, .B-Place, .Place {
     color: darkgoldenrod;
 }
-
 .I-Cause, .B-Cause, .Cause {
     color: hotpink;
 }
-
 .B-Airline, .I-Airline, .Airline {
     color: blue;
 }
 .B-FlightNumber, .I-FlightNumber, .FlightNumber {
-    color: aquamarine;
+    color: mediumaquamarine;
 }
-
 .I-Origin, .I-Destination, .B-Origin, .Origin, .B-Destination, .Destination{
     color: mediumpurple;
 }
