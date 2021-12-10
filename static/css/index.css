@@ -36,6 +36,8 @@ footer{
 
 .tool-padding{
     padding:10px;
+    display: inline-block;
+    column-break-inside: avoid;
 }
 
 .I-DateOfAccident, .B-DateOfAccident, .DateOfAccident{

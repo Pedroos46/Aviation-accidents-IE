@@ -19,9 +19,6 @@ window.addEventListener('load', function () {
     document.getElementById("IEFromExample").addEventListener("click", IEFromExample);
 })
 
-let connectionWithServerFailed = false;
-
-
 function loadExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
     responseTextDataElement.innerText = "";
@@ -33,12 +30,11 @@ function loadExample(){
     element.value = sentence_list[num];
 }
 
-function IEFromExample(host= "http://127.0.0.1:5000"){
+function IEFromExample(){
     let responseTextDataElement = document.getElementById('responseTextData');
     let responseTextDataElementJ = $('#responseTextData');
 
     let inputTextAreaValue = document.getElementById('inputTextArea').value;
-
     responseTextDataElement.innerText = "";
 
     let myHeaders = new Headers();
@@ -50,7 +46,7 @@ function IEFromExample(host= "http://127.0.0.1:5000"){
         redirect: 'follow'
     };
 
-    const URL = "http://127.0.0.1:5000"+ "/run?inputstr=" + inputTextAreaValue
+    const URL = "http://127.0.0.1:5000/run?inputstr=" + inputTextAreaValue
     fetch(URL, requestOptions)
         .then(response => response.text())
         .then(result => {
@@ -59,10 +55,7 @@ function IEFromExample(host= "http://127.0.0.1:5000"){
         })
         .catch(error => {
             console.log('error', error)
-            //it may fail due to flask configurations, trying with the hostname from DOM
-            if(!connectionWithServerFailed){ IEFromExample(window.location.host)}
-            else{ responseTextDataElement.innerHTML = '<p class="text-danger">Looks like there is a problem with Flask server.</p>'}
-            connectionWithServerFailed = true;
+            responseTextDataElement.innerHTML = '<p class="text-danger">Looks like there is a problem with Flask server.</p>';
         });
 }
 

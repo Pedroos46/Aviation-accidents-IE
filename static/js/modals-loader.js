@@ -14,47 +14,63 @@ document.write(`
             <div class="modal-body ">
                  <div class="card-columns">
             
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/Pytorch_logo.png" alt="Card image cap">
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/Pytorch_logo.png" loading="lazy" alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">PyTorch</p>
                         </div>
                     </div>
             
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../logos/colab_logo.png" alt="Card image cap">
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/colab_logo.png" loading="lazy" alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">Google Colab</p>
                         </div>
                     </div>
-            
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../logos/hug_face.jpeg" alt="Card image cap">
+                    
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/python-pip.jpeg" loading="lazy"  alt="Card image cap">
+                        <div class="card-body text-center">
+                            <p class="card-text">Python PIP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/hug_face.jpeg" loading="lazy" alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">BERT</p>
                         </div>
                     </div>
-            
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../logos/Flask_logo.png" alt="Card image cap">
+                   
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/Flask_logo.png" loading="lazy"  alt="Card image cap">
                         <div class="card-body text-center">
-                            <p class="card-text">Google Colab</p>
+                            <p class="card-text">Flask</p>
                         </div>
-                    </div>
-            
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../logos/PyCharm_Icon.png" alt="Card image cap">
-                        <div class="card-body text-center">
-                            <p class="card-text">PyCharm IDE</p>
-                        </div>
-                    </div>
-            
-                    <div class="card tool-padding" style="width: 10rem;">
-                        <img class="card-img-top img-padding" src="../logos/QuillBot_logo.jpeg" alt="Card image cap">
+                    </div> 
+                    
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/QuillBot_logo.jpeg" loading="lazy" alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">QuillBot</p>
                         </div>
+                    </div> 
+                    
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/PyCharm_Icon.png" loading="lazy"  alt="Card image cap">
+                        <div class="card-body text-center">
+                            <p class="card-text">PyCharm IDE</p>
+                        </div>
+                    </div>  
+
+                    <div class="card tool-padding" style="width: 9rem;">
+                        <img class="card-img-top img-padding" src="../../static/logos/GitHub-Logo.png" loading="lazy" alt="Card image cap">
+                        <div class="card-body text-center">
+                            <p class="card-text">GitHub</p>
+                        </div>
                     </div>
+                                        
+
 
     </div>    
             </div>
