@@ -71,6 +71,9 @@ If at some point you encounter unauthorized access to the server (403) or the se
 
 Another problem detected while development is the dev and production launch. Due to some Flask configurations, the server may not start if it detects that it is in production. For this we recommend reviewing the [Flask Environment configuration](https://flask.palletsprojects.com/en/2.0.x/config/) in order to set `FLASK_ENV`.
 
+    FLASK_APP = app.py
+    FLASK_ENV = development
+    FLASK_DEBUG = 0
 
 ## Launching the web app.
 
@@ -101,3 +104,10 @@ or
     python3 application.py  
 
 inside the folder *terminal-application*.
+
+## Authors
+Roger Pedrós Villorbina.
+
+Wenjie Jin. 
+
+Rodrigo Caero.

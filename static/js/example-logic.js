@@ -9,7 +9,7 @@ const sentence6 = 'On January 1, 1978, a Boeing 747-237B, Air India Flight 855, 
 const sentence7 = 'On April 11, 2018, an Algerian Air Force transport plane crashed shortly after take-off from Boufarik Airport, killing all 247 passengers and 10 crew on board the Ilyushin Il-76.'
 const sentence8 = 'On September 26, 1997, an Airbus A300B4-220, Garuda Indonesia Flight 152, which departed from Jakarta, Indonesia, and was preparing to land at Medan, North Sumatra, crashed into mountainous terrain, killing 222 passengers and 12 crew members.'
 const sentence9 = 'On August 6, 1997, a Boeing 747-3B5, Korean Air Flight 801, crashed on approach to the international airport in the United States territory of Guam, killing 228 of the 254 people aboard.'
-const sentence10 = '1939, August 13 ¨C A Pan Am Sikorsky S-43 crashes into Guanabara Bay, Brazil, due to loss of control following engine failure, killing 12 of the 14 on board.'
+const sentence10 = '1939, August 13 A Pan Am Sikorsky S-43 crashes into Guanabara Bay, Brazil, due to loss of control following engine failure, killing 12 of the 14 on board.'
 
 const sentence_list = [sentence1, sentence2, sentence3, sentence4, sentence5, sentence6, sentence7, sentence8, sentence9, sentence10]
 

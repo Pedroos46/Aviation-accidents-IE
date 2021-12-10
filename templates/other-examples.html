@@ -1,0 +1,280 @@
+<!-- Other-examples file with fullY independent form index.html -->
+<!-- NOT IN USE BY THE APPLICATION -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTHER EXAMPLES: Aviation Accidents Information Extraction</title>
+
+    <!-- Bootstrap 4.3.1 | Jquery: 3.6.0 | Popper: 1.14.7 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../static/css/index.css">
+
+
+</head>
+
+
+<div class="simple-inline text-justify">
+    <div class="row">
+        <div class="col-md">
+            <h3>Text input</h3>
+            <div class="form-group">
+                <textarea disabled class="form-control text-justify">August 13, 1939: A Pan Am Sikorsky S-43 crashes into Guanabara Bay, Brazil, due to loss of control following engine failure, killing 12 of the 14 on board.</textarea>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <h3>Response</h3>
+            <div>
+                <div>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="DateOfAccident"
+                       data-original-title="DateOfAccident">&nbsp;August 13,</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="Year" data-original-title="Year">
+                        &nbsp;1939:</p>
+                    <p class="">&nbsp;A</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAircraft"
+                       data-original-title="TypeOfAircraft">&nbsp;Pan Am</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAircraft"
+                       data-original-title="TypeOfAircraft">&nbsp;Sikorsky S-43</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAccident"
+                       data-original-title="TypeOfAccident">&nbsp;crashes</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">
+                        &nbsp;Guanabara Bay , Brazil,</p>
+                    <p class="">&nbsp;due</p>
+                    <p class="">&nbsp;to</p>
+                    <p class="">&nbsp;loss</p>
+                    <p class="">&nbsp;of</p>
+                    <p class="">&nbsp;control</p>
+                    <p class="">&nbsp;following</p>
+                    <p class="">&nbsp;engine</p>
+                    <p class="">&nbsp;failure</p>
+                    <p class="">,</p>
+                    <p class="">&nbsp;killing</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="NumberOfVictims"
+                       data-original-title="NumberOfVictims">&nbsp;12</p>
+                    <p class="">&nbsp;the</p>
+                    <p data-toggle="tooltip" data-placement="top" title="" class="NumberOfVictims"
+                       data-original-title="NumberOfVictims">&nbsp;14</p>
+                    <p class="">&nbsp;board</p>
+                    <p class="">.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md">
+            <h3>Text input</h3>
+            <div class="form-group border-focus">
+                <textarea disabled class="form-control disabled" rows="3"> November 6, 1967. TWA Flight 159, a Boeing 707, overruns the runway at Greater Cincinnati Airport and catches fire; all on board escape the aircraft, but a passenger dies four days later. </textarea>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <h3>Response</h3>
+            <div>
+                <p data-toggle="tooltip" data-placement="top" title="" class="DateOfAccident"
+                   data-original-title="DateOfAccident">&nbsp;November 6,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Year" data-original-title="Year">&nbsp;1967.</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Airline" data-original-title="Airline">
+                    &nbsp;TWA</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="FlightNumber"
+                   data-original-title="FlightNumber">&nbsp;Flight 159,</p>
+                <p class="">&nbsp;a</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAircraft"
+                   data-original-title="TypeOfAircraft">&nbsp;Boeing 707,</p>
+                <p class="">&nbsp;overruns</p>
+                <p class="">&nbsp;the</p>
+                <p class="">&nbsp;runway</p>
+                <p class="">&nbsp;at</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">&nbsp;Greater</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">&nbsp;Cincinnati
+                    Airport</p>
+                <p class="">&nbsp;catches</p>
+                <p class="">&nbsp;fire</p>
+                <p class="">;</p>
+                <p class="">&nbsp;all</p>
+                <p class="">&nbsp;on</p>
+                <p class="">&nbsp;board</p>
+                <p class="">&nbsp;escape</p>
+                <p class="">&nbsp;the</p>
+                <p class="">&nbsp;aircraft</p>
+                <p class="">,</p>
+                <p class="">&nbsp;but</p>
+                <p class="">&nbsp;a</p>
+                <p class="">&nbsp;passenger</p>
+                <p class="">&nbsp;dies</p>
+                <p class="">&nbsp;four</p>
+                <p class="">&nbsp;days</p>
+                <p class="">&nbsp;later</p>
+                <p class="">.</p>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md">
+            <h3>Text input</h3>
+            <div class="form-group border-focus">
+                <textarea disabled class="form-control disabled" rows="3">On November 3, 2021,  Grodno Aviakompania Flight 1252, an An-12, crashes whilst attempting to land at Irkutsk International Airport, Russia whilst operating a cargo flight. All 9 aboard are killed.</textarea>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <h3>Response</h3>
+            <div>
+                <p class="">&nbsp;On</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="DateOfAccident"
+                   data-original-title="DateOfAccident">&nbsp;November 3,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Year" data-original-title="Year">&nbsp;2021,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Airline" data-original-title="Airline">
+                    &nbsp;Grodno</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="FlightNumber"
+                   data-original-title="FlightNumber">&nbsp;Flight 1252,</p>
+                <p class="">&nbsp;an</p>
+                <p class="">&nbsp;An-12</p>
+                <p class="">,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAccident"
+                   data-original-title="TypeOfAccident">&nbsp;crashes</p>
+                <p class="">&nbsp;attempting</p>
+                <p class="">&nbsp;to</p>
+                <p class="">&nbsp;land</p>
+                <p class="">&nbsp;at</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">&nbsp;Irkutsk
+                    International Airport,</p>
+                <p class="">&nbsp;Russia</p>
+                <p class="">&nbsp;whilst</p>
+                <p class="">&nbsp;operating</p>
+                <p class="">&nbsp;a</p>
+                <p class="">&nbsp;cargo</p>
+                <p class="">&nbsp;flight</p>
+                <p class="">.</p>
+                <p class="">&nbsp;All</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="NumberOfVictims"
+                   data-original-title="NumberOfVictims">&nbsp;9</p>
+                <p class="">&nbsp;are</p>
+                <p class="">&nbsp;killed</p>
+                <p class="">.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md">
+            <h3>Text input</h3>
+            <div class="form-group border-focus">
+                <textarea disabled class="form-control disabled" rows="3">On September 26, 1997, an Airbus A300B4-220, Garuda Indonesia Flight 152, which departed from Jakarta, Indonesia, and was preparing to land at Medan, North Sumatra, crashed into mountainous terrain, killing 222 passengers and 12 crew members.</textarea>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <h3>Response</h3>
+            <div><p class="">&nbsp;On</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="DateOfAccident"
+                   data-original-title="DateOfAccident">&nbsp;September 26,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Year" data-original-title="Year">&nbsp;1997,</p>
+                <p class="">&nbsp;an</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAircraft"
+                   data-original-title="TypeOfAircraft">&nbsp;Airbus A300B4-220,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Airline" data-original-title="Airline">
+                    &nbsp;Garuda Indonesia</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="FlightNumber"
+                   data-original-title="FlightNumber">&nbsp;Flight 152,</p>
+                <p class="">&nbsp;which</p>
+                <p class="">&nbsp;departed</p>
+                <p class="">&nbsp;from</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Destination"
+                   data-original-title="Destination">&nbsp;Jakarta,</p>
+                <p class="">&nbsp;Indonesia</p>
+                <p class="">,</p>
+                <p class="">&nbsp;and</p>
+                <p class="">&nbsp;was</p>
+                <p class="">&nbsp;preparing</p>
+                <p class="">&nbsp;to</p>
+                <p class="">&nbsp;land</p>
+                <p class="">&nbsp;at</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">&nbsp;Medan
+                    , North Sumatra,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAccident"
+                   data-original-title="TypeOfAccident">&nbsp;crashed</p>
+                <p class="">&nbsp;mountainous</p>
+                <p class="">&nbsp;terrain</p>
+                <p class="">,</p>
+                <p class="">&nbsp;killing</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="NumberOfVictims"
+                   data-original-title="NumberOfVictims">&nbsp;222</p>
+                <p class="">&nbsp;and</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Tripulation"
+                   data-original-title="Tripulation">&nbsp;12</p>
+                <p class="">&nbsp;members</p>
+                <p class="">.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-md">
+            <h3>Text input</h3>
+            <div class="form-group border-focus">
+                <textarea disabled class="form-control disabled" rows="3">January 8, 2016. West Air Sweden Flight 294, a Bombardier CRJ200 cargo freighter, crashes while in cruise near Akkajaure in Sweden; both crew members on board are killed.</textarea>
+            </div>
+        </div>
+
+        <div class="col-md">
+            <h3>Response</h3>
+            <div>
+                <p data-toggle="tooltip" data-placement="top" title="" class="DateOfAccident"
+                   data-original-title="DateOfAccident">&nbsp;January 8,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Year" data-original-title="Year">&nbsp;2016.</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Airline" data-original-title="Airline">
+                    &nbsp;West Air Sweden</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="FlightNumber"
+                   data-original-title="FlightNumber">&nbsp;Flight 294,</p>
+                <p class="">&nbsp;a</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAircraft"
+                   data-original-title="TypeOfAircraft">&nbsp;Bombardier CRJ200 cargo freighter,</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="TypeOfAccident"
+                   data-original-title="TypeOfAccident">&nbsp;crashes</p>
+                <p class="">&nbsp;in</p>
+                <p class="">&nbsp;cruise</p>
+                <p class="">&nbsp;near</p>
+                <p data-toggle="tooltip" data-placement="top" title="" class="Place" data-original-title="Place">&nbsp;Akkajaure
+                    in Sweden;</p>
+                <p class="">&nbsp;both</p>
+                <p class="">&nbsp;crew</p>
+                <p class="">&nbsp;members</p>
+                <p class="">&nbsp;on</p>
+                <p class="">&nbsp;board</p>
+                <p class="">&nbsp;are</p>
+                <p class="">&nbsp;killed</p>
+                <p class="">.</p>
+
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <script>
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+
+</div>
+
+</html>
