@@ -12,68 +12,74 @@ document.write(`
                 </button>
             </div>
             <div class="modal-body ">
-                 <div class="card-columns">
-            
+                <div class="card-columns">
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/Pytorch_logo.png" loading="lazy" alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/Pytorch_logo.png" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">PyTorch</p>
                         </div>
                     </div>
-            
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/colab_logo.png" loading="lazy" alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/colab_logo.png" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">Google Colab</p>
                         </div>
                     </div>
-                    
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/python-pip.jpeg" loading="lazy"  alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/python-pip.jpeg" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">Python PIP</p>
                         </div>
                     </div>
-                    
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/hug_face.jpeg" loading="lazy" alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/hug_face.jpeg" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">BERT</p>
                         </div>
                     </div>
-                   
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/Flask_logo.png" loading="lazy"  alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/Flask_logo.png" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">Flask</p>
                         </div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/QuillBot_logo.jpeg" loading="lazy" alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/QuillBot_logo.jpeg" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">QuillBot</p>
                         </div>
-                    </div> 
-                    
+                    </div>
+
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/PyCharm_Icon.png" loading="lazy"  alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/PyCharm_Icon.png" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">PyCharm IDE</p>
                         </div>
-                    </div>  
+                    </div>
 
                     <div class="card tool-padding" style="width: 9rem;">
-                        <img class="card-img-top img-padding" src="../../static/logos/GitHub-Logo.png" loading="lazy" alt="Card image cap">
+                        <img class="card-img-top img-padding" src="../../static/logos/GitHub-Logo.png" loading="lazy"
+                             alt="Card image cap">
                         <div class="card-body text-center">
                             <p class="card-text">GitHub</p>
                         </div>
                     </div>
-                                        
-
-
-    </div>    
+                </div>
             </div>
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
@@ -142,9 +148,9 @@ document.write(`
                         <ul>
                             <li>
                                 <p><i>BERT.</i> Retrieved Des 2, 2021, from
-                                <a href="https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForTokenClassification">
+                                    <a href="https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForTokenClassification">
                                         https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForTokenClassification
-                                </a>
+                                    </a>
                                 </p>
                             </li>
                         </ul>
