@@ -5,7 +5,7 @@ This repository contains the application web that uses a pre-trained model based
 
 The developed application has been designed to be easy to use, with a clear and lossless interface.
 
-![Front page of our application](/static/img/front2.png)
+![Front page of our application](https://raw.githubusercontent.com/Pedroos46/Aviation-accidents-IE/main/static/img/front2.png)
 
 The application also contains a few preloaded HTML samples that do not require starting the server with the model. To do so, simply open the [index.html](https://github.com/Pedroos46/Aviation-accidents-IE/blob/main/templates/index.html) page (inside the *templates* folder), as if it were any other web page.
 
