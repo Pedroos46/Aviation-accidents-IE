@@ -1,37 +1,23 @@
-## Welcome to GitHub Pages
+# Information Extraccion: Aviation accidents
+Laboratory Assignment II: Trainable Information Extraction. From AIW 2021.
 
-You can use the [editor on GitHub](https://github.com/Pedroos46/Aviation-accidents-IE/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This repository contains the application web that uses a pre-trained model based on fine-tunned BERT to extract information from aviation accidents texts. We we run our model inside a Flask server using torch.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The developed application has been designed to be easy to use, with a clear and lossless interface.
 
-### Markdown
+![Front page of our application](/static/img/front2.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The application also contains a few preloaded HTML samples that do not require starting the server with the model. To do so, simply open the [index.html](https://github.com/Pedroos46/Aviation-accidents-IE/blob/main/templates/index.html) page (inside the *templates* folder), as if it were any other web page.
 
-```markdown
-Syntax highlighted code block
+## Model
 
-# Header 1
-## Header 2
-### Header 3
+Our model has been build using a pre-trained version of BERT specific for Token Classifications sourced by HuggIngFace. (HugginFace, 2020). This  model is posteriorly fine-tuned. The fine-tuning procedure allows adjusting a pre-trained model, using transfer learning, to specialize the network towards a specific content or format.
 
-- Bulleted
-- List
+In our case, we adjust the model so that it is capable of detecting information related to aircraft accidents. We do it using the [Conscius](http://www.taln.upf.edu/pages/concisus/index.html)  Corpus (Saggion & Szasz, 2012) dataset, which contains .
 
-1. Numbered
-2. List
+## Authors
+Roger Pedrós Villorbina.
 
-**Bold** and _Italic_ and `Code` text
+Wenjie Jin. 
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Pedroos46/Aviation-accidents-IE/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Rodrigo Caero.
